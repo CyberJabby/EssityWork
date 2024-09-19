@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Jabby - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <img class="excel-imagen" alt="Logo de Microsoft Excel" src="images/microsoft-excel-2013-logo.png">
+        <a href="..\index.html">
+            <img class="titulo essity" alt="imagen de essity" src="images/essity-germany-logo.svg">
+        </a>
+        <h2 class="titulo dashboard">DASHBOARD</h2>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Información Principal -->
+        <section class="informacion-principal">
+            <p class="titulo-principal">
+                Observa el desempeño en cuanto a los reportes diarios que realizan los empleados encargados de cada máquina en los formatos de atributos críticos y atributos de empaque.
+            </p> 
+            <div class="container-video">
+                <video class="imagen-essity" autoplay loop muted> 
+                    <source src="images/video.mp4" type="Video/mp4"> 
+                </video>
+            </div>
+        </section>
+        <section>
+
+            <div class="Descarga">DESCARGA EL EXCEL ACTUALIZADO HACIENDO CLICK EN EL BOTON DE LA MAQUINA A CONSULTAR</div>
+
+        </section>
+        <!-- Selección de Máquina -->
+        <section class="select-maquina">
+            <div class="maquinas">
+                <button class="botones INCO-UNO" id="btn-inco-1">INCO 1</button>
+                <button class="botones INCO-DOS" id="btn-inco-2">INCO 2</button>
+                <button class="botones SILVIA" id="btn-silvia">SILVIA</button>
+                <button class="botones SARA" id="btn-sara">SARA</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           const btnInco1 = document.getElementById('btn-inco-1');
+           const btnInco2 = document.getElementById('btn-inco-2');
+           const btnSilvia = document.getElementById('btn-silvia');
+           const btnSara = document.getElementById('btn-sara');
+        
+           function descargarArchivo(url) {
+               const link = document.createElement('a');
+               link.href = url;
+               link.download = url.split('/').pop(); 
+               document.body.appendChild(link);
+               link.click();
+               document.body.removeChild(link);
+           }
+        
+           btnInco1.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_INCO1.xlsx'));
+           btnInco2.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_INCO2.xlsx'));
+           btnSilvia.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_SILVIA.xlsx'));
+           btnSara.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_SARA.xlsx'));
+        });
+    </script>
+        
+    <!-- Footer -->
+    <footer>Todos los Derechos Reservados - 2024</footer>
+
+</body>
+</html>
