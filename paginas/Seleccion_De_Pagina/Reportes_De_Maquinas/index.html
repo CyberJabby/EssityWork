@@ -36,12 +36,12 @@
 
         </section>
         <!-- Selección de Máquina -->
-        <section class="select-maquina">
-            <div class="maquinas">
-                <button class="botones INCO-UNO" id="btn-inco-1">INCO 1</button>
-                <button class="botones INCO-DOS" id="btn-inco-2">INCO 2</button>
-                <button class="botones SILVIA" id="btn-silvia">SILVIA</button>
-                <button class="botones SARA" id="btn-sara">SARA</button>
+        <section class="informacion-principal">
+            <p class="titulo-principal">
+                Observa el desempeño en cuanto a los reportes diarios que realizan los empleados encargados de cada máquina en los formatos de atributos críticos y atributos de empaque.
+            </p>
+            <div class="container-video">
+                <iframe src="https://player.vimeo.com/video/1011034502" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
         </section>
     </main>
@@ -61,7 +61,6 @@
                link.click();
                document.body.removeChild(link);
            }
-        
            btnInco1.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_INCO1.xlsx'));
            btnInco2.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_INCO2.xlsx'));
            btnSilvia.addEventListener('click', () => descargarArchivo('files/CONTROL_DE_REPORTES_SILVIA.xlsx'));
