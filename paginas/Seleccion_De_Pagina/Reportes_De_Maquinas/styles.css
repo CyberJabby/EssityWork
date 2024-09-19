@@ -150,3 +150,10 @@ footer {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 80px;
 }
+
+.container-video iframe {
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+    border: none;
+}
