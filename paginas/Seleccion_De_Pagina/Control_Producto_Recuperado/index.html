@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Jabby - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <a href="..\index.html">
+        <img class="titulo essity" alt="imagen de essity" src="images/essity-germany-logo.svg">
+        </a>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Información Principal -->
+        <section class="informacion-principal">
+            <img class="imagen-essity" alt="Diagrama de rendimiento de ESSITY" src="images/logo-medium.png">
+        </section>
+  
+        <br>
+        <!-- Selección de Máquina -->
+         <div>
+        <h1 class="selecciona">HAZ CLICK PARA DESCARGAR EL DASHBOARD</h1>
+        </div>
+        <section class="select-maquina">
+            <div class="maquinas">
+                <button class="botones SILVIA" id="btn-silvia">Dashboard Control Reproceso</button>
+            </div>
+        </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           // Obtener los botones por su ID
+           const btnSilvia = document.getElementById('btn-silvia');
+        
+           // Función para descargar un archivo
+           function descargarArchivo(url) {
+               const link = document.createElement('a');
+               link.href = url;
+               link.download = url.split('/').pop(); // El nombre del archivo será tomado del URL
+               document.body.appendChild(link);
+               link.click();
+               document.body.removeChild(link);
+           }
+        
+           // Añadir event listeners a cada botón
+
+           btnSilvia.addEventListener('click', () => descargarArchivo('files/DASHBOARD_FORMATO_CONTROL_RECUPERADO.xlsx'));
+
+        });
+        </script>
+    </main>
+
+    
+
+
+    <!-- Footer -->
+    <footer>Todos los Derechos Reservados - 2024</footer>
+
+</body>
+</html>
